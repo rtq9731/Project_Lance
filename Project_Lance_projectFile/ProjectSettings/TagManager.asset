@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player_Horse
+  - Player_Weapon
+  - Player
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player_Hores
+    uniqueID: 2666996545
+    locked: 0
+  - name: Player_Weapon
+    uniqueID: 2269766349
+    locked: 0
+  - name: Player_User
+    uniqueID: 1355290107
+    locked: 0
+  - name: UI
+    uniqueID: 2696018715
     locked: 0
