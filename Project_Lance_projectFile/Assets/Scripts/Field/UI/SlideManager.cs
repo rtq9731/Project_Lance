@@ -1,18 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SlideManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public enum SliderType
     {
-        
+        SpeedSilder,
+        HPSilder
+    };
+
+    [Serializable]
+    public class SliderClass
+    {
+        public SliderType type;
+        public Slider slider;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    private List<SliderClass> Sliders;
+
+    new Dictionary<SliderType, Slider> SliderMap = new Dictionary<SliderType, Slider>();
+    
 }
