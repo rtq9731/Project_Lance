@@ -350,6 +350,7 @@ GameObject:
   - component: {fileID: 210779736}
   - component: {fileID: 210779738}
   - component: {fileID: 210779739}
+  - component: {fileID: 210779740}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -448,8 +449,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79cd3c069efe33348bc153de07c6b723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagOfTagetToMove: Player
   speed: 1
+--- !u!114 &210779740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210779735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1477ed25461cef54abf39b17614256f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagOfHitScanObject: PlayerWeapon
+  hitSacnRange: 1
+  HP: 100
+  notDieTime: 5
 --- !u!1 &315569603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1266,7 @@ GameObject:
   - component: {fileID: 1040250340}
   m_Layer: 0
   m_Name: BasicLance
-  m_TagString: Untagged
+  m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
