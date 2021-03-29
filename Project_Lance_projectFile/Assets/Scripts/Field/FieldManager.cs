@@ -16,7 +16,6 @@ public class FieldManager : MonoBehaviour
     {
         Instance = this;
         player = FindObjectOfType<PlayerScript>();
-
     }
     private void OnDestroy()
     {
