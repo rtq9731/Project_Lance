@@ -11,11 +11,21 @@ public class FieldManager : MonoBehaviour
 
     public PlayerScript Player
     { get; private set; }
+    public float SpeedOfPlayer
+    { get; private set; }
+
+    private float hp = 0;
+    public float HP
+    {
+        get { return hp; }
+        set { hp = value; }
+    }
 
     void Awake()
     {
         Instance = this;
         player = FindObjectOfType<PlayerScript>();
+        SpeedOfPlayer = player.Speed;
     }
     private void OnDestroy()
     {

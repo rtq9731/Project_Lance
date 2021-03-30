@@ -19,6 +19,12 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] [Header("회전속도")]
     private float rotationspeed = 1;
 
+    public float Speed
+    {
+        get { return speed; }
+        private set { speed = value; }
+    }
+
     void Update()
     {
 

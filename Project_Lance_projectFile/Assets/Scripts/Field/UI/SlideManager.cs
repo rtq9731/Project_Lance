@@ -10,7 +10,8 @@ public class SlideManager : MonoBehaviour
     public enum SliderType
     {
         SpeedSilder,
-        HPSilder
+        HPSilder,
+        HorseSteminaGauge
     };
 
     [Serializable]
@@ -21,8 +22,23 @@ public class SlideManager : MonoBehaviour
     }
 
     [SerializeField]
-    private List<SliderClass> Sliders;
+    private List<SliderClass> sliders;
 
-    new Dictionary<SliderType, Slider> SliderMap = new Dictionary<SliderType, Slider>();
-    
+    new Dictionary<SliderType, SliderClass> sliderMap = new Dictionary<SliderType, SliderClass>();
+
+    private void Start()
+    {
+        foreach(var item in sliders)
+        {
+            sliderMap[item.type] = item;
+        }
+
+    }
+
+    private void SetHpGauge()
+    {
+        sliderMap[SliderType.HPSilder].slider.value = FieldManager.Instance.HP;
+        sliderMap[SliderType.SpeedSilder].slider.value = FieldManager.Instance.SpeedOfPlayer;
+    }
+
 }
