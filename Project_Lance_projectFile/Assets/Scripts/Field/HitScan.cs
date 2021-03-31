@@ -18,6 +18,16 @@ public class HitScan : MonoBehaviour
     [SerializeField]
     [Header("한번 피격 후 이 오브젝트의 무적시간")]
     private float notDieTime = 0;
+    [SerializeField]
+    [Header("맞은 후 이 캐릭터가 취할 행동")]
+    typeOfAct act;
+
+    private enum typeOfAct{
+        shake,
+        die,
+        fade,
+        move,
+    }
 
     private float notDieTimer = 0;
 

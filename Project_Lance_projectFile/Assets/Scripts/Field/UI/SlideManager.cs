@@ -35,10 +35,15 @@ public class SlideManager : MonoBehaviour
 
     }
 
-    private void SetHpGauge()
+    private void Update()
     {
-        sliderMap[SliderType.HPSilder].slider.value = FieldManager.Instance.HP;
-        sliderMap[SliderType.SpeedSilder].slider.value = FieldManager.Instance.SpeedOfPlayer;
+        SetSpeedGauge();
+    }
+
+    private void SetSpeedGauge()
+    {
+        // sliderMap[SliderType.HPSilder].slider.value = FieldManager.Instance.HP;
+        sliderMap[SliderType.SpeedSilder].slider.value = FieldManager.Instance.SpeedOfPlayer / 10;
     }
 
 }

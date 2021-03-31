@@ -12,7 +12,7 @@ public class FieldManager : MonoBehaviour
     public PlayerScript Player
     { get; private set; }
     public float SpeedOfPlayer
-    { get; private set; }
+    { get { return player.Speed; } private set { return; } }
 
     private float hp = 0;
     public float HP
