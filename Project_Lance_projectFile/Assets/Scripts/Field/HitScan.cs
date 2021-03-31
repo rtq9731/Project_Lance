@@ -22,6 +22,8 @@ public class HitScan : MonoBehaviour
     [Header("맞은 후 이 캐릭터가 취할 행동")]
     typeOfAct act;
 
+    public bool isHit;
+
     private enum typeOfAct{
         shake,
         die,
@@ -43,7 +45,7 @@ public class HitScan : MonoBehaviour
     {
         if(Vector2.Distance(target.position, transform.position) < hitSacnRange && notDieTimer > notDieTime)
         {
-            HitScanOfThisObject();
+            isHit = true;
         }
 
         notDieTimer += Time.deltaTime;
@@ -52,8 +54,8 @@ public class HitScan : MonoBehaviour
     private void HitScanOfThisObject() //TODO : 일관성있는 오브젝트들의 맞았을 시 행동 구현 필요
     {
         HP--;
-        transform.DOShakePosition(0.1f, 0.5f);
+        transform.DOShakePosition(0.5f, 0.5f);
         notDieTimer = 0;
     }
-
+ 
 }

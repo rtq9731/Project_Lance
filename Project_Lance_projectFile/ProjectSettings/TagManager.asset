@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerWeapon
   - EnemyWeapon
+  - PlayerWeaponHitpoint
   layers:
   - Default
   - TransparentFX
@@ -43,14 +44,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player_Hores
-    uniqueID: 2666996545
-    locked: 0
-  - name: Player_Weapon
+  - name: Map
     uniqueID: 2269766349
     locked: 0
-  - name: Player_User
+  - name: Props
     uniqueID: 1355290107
+    locked: 0
+  - name: Enemy
+    uniqueID: 3703757909
+    locked: 0
+  - name: Player
+    uniqueID: 2666996545
     locked: 0
   - name: UI
     uniqueID: 2696018715

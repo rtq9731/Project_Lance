@@ -27,6 +27,11 @@ public class FieldManager : MonoBehaviour
         player = FindObjectOfType<PlayerScript>();
         SpeedOfPlayer = player.Speed;
     }
+    private void Update()
+    {
+        
+    }
+
     private void OnDestroy()
     {
         Instance = null;
