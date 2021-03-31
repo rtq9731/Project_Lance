@@ -19,6 +19,14 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] [Header("회전속도")]
     private float rotationspeed = 1;
 
+    [SerializeField]
+    [Header("이동 할 수 있는 최대 XY")]
+    private Vector2 maximumPos;
+    [SerializeField]
+    [Header("이동 할 수 있는 최소 XY")]
+    private Vector2 minimumPos;
+
+
     public float Speed
     {
         get { return speed; }
@@ -27,7 +35,27 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+        {
+            if (this.transform.position.x > minimumPos.x)
+            {
+                this.transform.position = new Vector3(minimumPos.x, this.transform.position.y);
+            }
 
+            if (this.transform.position.x < minimumPos.x)
+            {
+                this.transform.position = new Vector3(minimumPos.x, this.transform.position.y);
+            }
+
+            if (this.transform.position.y > minimumPos.y)
+            {
+                this.transform.position = new Vector3(this.transform.position.x, minimumPos.y);
+            }
+
+            if (this.transform.position.y < minimumPos.y)
+            {
+                this.transform.position = new Vector3(this.transform.position.x, minimumPos.y);
+            }
+        }
         transform.Translate(Vector2.up * speed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.W))
