@@ -36,9 +36,9 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         {
-            if (this.transform.position.x > minimumPos.x)
+            if (this.transform.position.x > maximumPos.x)
             {
-                this.transform.position = new Vector3(minimumPos.x, this.transform.position.y);
+                this.transform.position = new Vector3(maximumPos.x, this.transform.position.y);
             }
 
             if (this.transform.position.x < minimumPos.x)
@@ -46,9 +46,9 @@ public class PlayerScript : MonoBehaviour
                 this.transform.position = new Vector3(minimumPos.x, this.transform.position.y);
             }
 
-            if (this.transform.position.y > minimumPos.y)
+            if (this.transform.position.y > maximumPos.y)
             {
-                this.transform.position = new Vector3(this.transform.position.x, minimumPos.y);
+                this.transform.position = new Vector3(this.transform.position.x, maximumPos.y);
             }
 
             if (this.transform.position.y < minimumPos.y)
